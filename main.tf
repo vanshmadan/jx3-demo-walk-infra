@@ -5,6 +5,8 @@ module "jx" {
   gsm                             = var.gsm
   cluster_name                    = var.cluster_name
   cluster_location                = var.cluster_location
+  cluster_network                = "gke-vpc-network-dev"
+  cluster_subnetwork              = "gke-vpc-subnet-dev"
   resource_labels                 = var.resource_labels
   node_machine_type               = var.node_machine_type
   min_node_count                  = var.min_node_count
@@ -17,11 +19,10 @@ module "jx" {
   jx_bot_username                 = var.jx_bot_username
   jx_bot_token                    = var.jx_bot_token
   force_destroy                   = var.force_destroy
-  apex_domain                     = var.apex_domain
-  subdomain                       = var.subdomain
-  apex_domain_gcp_project         = var.apex_domain_gcp_project
-  apex_domain_integration_enabled = var.apex_domain_integration_enabled
-
+  #apex_domain                     = var.apex_domain
+  #subdomain                       = var.subdomain
+  #apex_domain_gcp_project         = var.apex_domain_gcp_project
+  #apex_domain_integration_enabled = var.apex_domain_integration_enabled
 }
 
 output "connect" {
